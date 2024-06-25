@@ -5,13 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "AlipaySDK",
-    defaultLocalization: "en",
+    defaultLocalization: "zh-CN",
     platforms: [.iOS(.v15)],
     products: [
-        .library(name: "AlipaySDK", targets: ["AlipaySDK_XCFramework", "AlipaySDK"]),
+        .library(name: "AlipaySDK", targets: ["AlipaySDK"]),
     ],
     targets: [
-        .target(name: "AlipaySDK", dependencies: [], resources: [.copy("AlipaySDK.bundle")]),
-        .binaryTarget(name: "AlipaySDK_XCFramework", path: "XCFrameworks/AlipaySDK/AlipaySDK.xcframework"),
+        .binaryTarget(name: "AlipaySDK", path: "XCFrameworks/AlipaySDK/AlipaySDK.xcframework"),
     ]
 )
